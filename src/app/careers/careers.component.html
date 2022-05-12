@@ -1,0 +1,122 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="careers.component.scss">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="guesthome.component.scss">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" id="nav">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#" class="w3-bar-item w3-button"><b>FUEL MATE</b></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a [routerLink]="['/Gusethome']" class="w3-bar-item w3-button">Home</a>
+      <a  [routerLink]="['/aboutus']" class="w3-bar-item w3-button">About</a>
+      <a [routerLink]="['/contact']" class="w3-bar-item w3-button">Contact</a>
+      <a [routerLink]="['/adminlogin']" class="w3-bar-item w3-button">Sign In</a>
+    </div>
+  </div>
+</div><br><br><br>
+<div class="container">
+            <form [formGroup]="career" class="form-horizontal" role="form">
+                <h2>Registration Form</h2>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" formControlName="fname" placeholder="Full Name" class="form-control" autofocus>
+                        <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+                    </div>
+                    <label *ngIf="career.controls.fname?.errors?.required &&savestatus" class="text-danger">*</label>
+
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" formControlName="email" placeholder="Email" class="form-control">
+                    </div>
+                    <label *ngIf="career.controls.email?.errors?.required &&savestatus" class="text-danger">*</label>
+                </div>
+                <div class="form-group">
+                    <label for="number" class="col-sm-3 control-label">Aadhar</label>
+                    <div class="col-sm-9">
+                        <input type="text" formControlName="aadhar"  class="form-control">
+                        <label *ngIf="career.controls.aadhar?.errors?.required &&savestatus" class="text-danger">*</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth</label>
+                    <div class="col-sm-9">
+                        <input type="date" formControlName="dob" class="form-control">
+                        <label *ngIf="career.controls.dob?.errors?.required &&savestatus" class="text-danger">*</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Contact Number</label>
+                    <div class="col-sm-9">
+                        <input type="number" formControlName="cn" class="form-control">
+                        <label *ngIf="career.controls.cn?.errors?.required &&savestatus" class="text-danger">*</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Qualification</label>
+                    <div class="col-sm-9">
+                        <input type="text" formControlName="qualification" class="form-control">
+                        <label *ngIf="career.controls.qualification?.errors?.required &&savestatus" class="text-danger">*</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date</label>
+                    <div class="col-sm-9">
+                        <input type="date" formControlName="cdate" class="form-control">
+                        <label *ngIf="career.controls.cdate?.errors?.required &&savestatus" class="text-danger">*</label>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" formControlName="gender" value="Female">Female
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" formControlName="gender" value="Male">Male
+                                </label>
+                            </div>
+                        </div>
+                        <label *ngIf="career.controls.gender?.errors?.required &&savestatus" class="text-danger">*</label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Place</label>
+                    <div class="col-sm-9">
+                        <input type="text" formControlName="place" class="form-control">
+                        <label *ngIf="career.controls.place?.errors?.required &&savestatus" class="text-danger">*</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Experience</label>
+                    <div class="col-sm-9">
+                        <input type="text" formControlName="exp" class="form-control">
+                        <label *ngIf="career.controls.exp?.errors?.required &&savestatus" class="text-danger">*</label>
+                    </div>
+                </div><!-- /.form-group -->
+                <!-- /.form-group -->
+                 <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" (click)="onsubmit()"class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->

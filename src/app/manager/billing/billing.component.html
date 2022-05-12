@@ -1,0 +1,90 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" style="margin-top:30px">
+<div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+  <div class="panel-heading"><h3 class="panel-title"></h3>
+      <div style="float:right; font-size: 80%; position: relative; top:-10px">
+  </div>
+  
+  <div class="panel-body">
+   <form role="form" [formGroup]="bill">
+   <div class="alert alert-danger">
+                <h4><strong>Recepit</strong></h4>
+            </div>
+            <div class="row">
+    			<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+                        <label>Product Name</label>
+                        <select class="form-control input-sm" formControlName="Product_id" >
+                          <option selected value="">---Select---</option>
+                          <option *ngFor="let row of dataarray" [value]="row.Product_id">
+                            {{row.Product_name}}<!--This drop down isn't working TYs page have not the right
+                            function for the   dropdown -->
+                          </option>
+                          </select>
+					</div>
+				</div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+    				<div class="form-group">
+                        <label>Billing Date</label>
+                        <input type="date" name="middle_name" id="middle_name" formControlName="bdate"class="form-control" placeholder="Date" tabindex="1">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+                        <label>Customer Name</label>
+						<input type="text" name="last_name" id="last_name" class="form-control " formControlName="cname" placeholder="Customer Name" tabindex="2">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+    			<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+                        <label>Organization Name</label>
+                        <select class="form-control input-sm" formControlName="oname" >
+                          <option selected value="">---Select---</option>
+                         <option *ngFor="let row of dataarray">
+                            {{row.Organization_Name}}     
+                         </option>
+                          </select>
+					</div>
+				</div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+    				<div class="form-group">
+                        <label>Quantity</label>
+                        <input type="Number" name="middle_name" id="middle_name" formControlName="quantity"class="form-control" placeholder="Date" tabindex="1">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+                        <label>Amount</label>
+						<input type="Number" name="last_name" id="last_name" class="form-control " formControlName="amount" placeholder="Amount" tabindex="2">
+					</div>
+				</div>
+			</div>
+                                    
+                                    <div class="input-group">
+                                      <div class="checkbox" style="margin-top: 0px;">
+                                        <label>
+                                         
+                                        </label>
+                                      </div>
+                                    </div>
+                                    
+  <button type="submit" class="btn btn-success" (click)="onSubmit()" >Save</button>
+  
+  <hr style="margin-top:10px;margin-bottom:10px;" >
+  
+  <div class="form-group">
+                                    
+                                    
+</div> 
+</form>
+  </div>
+</div>
+</div>
+</div>

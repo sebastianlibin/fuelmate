@@ -1,0 +1,37 @@
+<html>
+
+<body>
+    <form>
+        <div class="container" style="width:100%;margin-left:5%;margin-bottom: 5%;">
+            <div class="row">
+                <div class="col-md-9" style="box-shadow: 2px 2px 10px #4d4e4e; border-radius:0px; top: 100px;">
+                    <div class="row" style="margin-left: -173%;margin-top: 2%;margin-bottom: -5%;">
+                        <input type="submit" name="addnew" value="Add New" [routerLink]="['/home/product']"class="btn btn-primary" style="margin-left:63%">
+                    </div>
+                    <h2 style="text-align: center;margin-top: 6%;font-family: fantasy;">PRODUCT VIEW DETAILS</h2>
+                    <div class="form-horizontal" style="margin-left:0px;">
+                        <table class="table table-hover" style="border: 2px solid #adaaaa; box-shadow: 3px 3px 11px #777777; margin-bottom:7%">
+                            <tr>
+                                <th>Sl No</th>
+                                <!--<th>Product Id</th>-->
+                                <th>Product Name</th>
+                                <th>Description</th>
+                                <th style="color:#F00">Edit</th>
+                                <th style="color:#F00">Delete</th>
+                            </tr>
+                            <tr *ngFor="let row of dataarray;let i=index">
+                                <td>{{i+1}}</td>
+                                <!--<td>{{row.Product_id}}</td>-->
+                                <td>{{row.Product_name}}</td>
+                                <td>{{row.Description}}</td>
+                                <td><a [routerLink]="['/home/editproduct',row.Product_id]">Edit</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

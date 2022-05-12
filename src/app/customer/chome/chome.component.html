@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+<!-- <link rel="stylesheet" href="style.css"> -->
+<!-- Boxicons CDN Link -->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sidebar">
+<div class="logo-details">
+<i class='bx bxl-c-plus-plus'></i>
+<span class="logo_name">Admin Home</span>
+</div>
+<ul class="nav-links">
+<li>
+<a href="#" class="active">
+<i class='bx bx-grid-alt'></i>
+<span class="links_name">Dashboard</span>
+</a>
+</li>
+<li>
+<a>
+<i class='bx bx-pie-chart-alt-2'></i>
+<span class="links_name">View Pump Details</span>
+</a>
+</li>
+<li>
+<a>
+<i class='bx bx-coin-stack'></i>
+<span class="links_name">View Product Details</span>
+</a>
+</li>
+<li>
+<a>
+<i class='bx bx-book-alt'></i>
+<span class="links_name">New Application</span>
+</a>
+</li>
+<li>
+<a>
+<i class='bx bx-user'></i>
+<span class="links_name">Manager Registration</span>
+</a>
+</li>
+<li>
+<a >
+<i class='bx bx-message'></i>
+<span class="links_name">Rate</span>
+</a>
+<li>
+    <a href="#">
+    <i class=''></i>
+    <span class="links_name"></span>
+    </a>
+    </li>
+    <li class="log_out">
+    <a>
+    <i class='bx bx-log-out'></i>
+    <span class="links_name" >Log out</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    <section class="home-section">
+    <div style="margin-left: 300px;">
+    <router-outlet></router-outlet>
+    </div>
+    </section>
+    </body>
+    </html>

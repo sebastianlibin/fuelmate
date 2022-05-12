@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+<!-- <link rel="stylesheet" href="style.css"> -->
+<!-- Boxicons CDN Link -->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <section>
+    <div class="nav">
+    </div>
+  </section>
+  <section>
+<div class="sidebar">
+<div class="logo-details">
+<i class='bx bxl-c-plus-plus'></i>
+<span class="logo_name">Admin Home</span>
+</div>
+<ul class="nav-links">
+<li>
+<a href="#" class="active">
+<i class='bx bx-grid-alt'></i>
+<span class="links_name">Dashboard</span>
+</a>
+</li>
+<li>
+<a [routerLink]="['/home/pumpview']">
+<i class='bx bx-pie-chart-alt-2'></i>
+<span class="links_name">View Pump Details</span>
+</a>
+</li>
+<!--<li>
+    <a [routerLink]="['/home/pumpview']">
+    <i class='bx bx-pie-chart-alt-2'></i>
+    <span class="links_name">Edit Product Details</span>
+    </a>
+    </li>-->
+<li>
+<a  [routerLink]="['/home/productview']">
+<i class='bx bx-coin-stack'></i>
+<span class="links_name">View Product Details</span>
+</a>
+</li>
+<li>
+<a [routerLink]="['/home/careerview']">
+<i class='bx bx-book-alt'></i>
+<span class="links_name">New Application</span>
+</a>
+</li>
+<li>
+<a [routerLink]="['/home/managerreg']">
+<i class='bx bx-user'></i>
+<span class="links_name">Manager Registration</span>
+</a>
+</li>
+<li>
+  <a [routerLink]="['/home/managerview']">
+  <i class='bx bx-message'></i>
+  <span class="links_name">Manager View</span>
+  </a>
+  </li>
+<li>
+<a [routerLink]="['/home/viewrate']">
+<i class='bx bx-message'></i>
+<span class="links_name">Rate</span>
+</a>
+</li>
+<li>
+  <a [routerLink]="['../adminlogin']">
+  <i class='bx bx-log-out'></i>
+  <span class="links_name" >Log out</span>
+  </a>
+  </li>
+<li>
+  <a href="#">
+    <i class=''></i>
+    <span class="links_name"></span>
+    </a>
+    </li>
+    <li class="log_out">
+    <a [routerLink]="['../adminlogin']">
+    <i class='bx bx-log-out'></i>
+    <span class="links_name" >Log out</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    <section class="home-section">
+    <div style="margin-left: 300px;">
+    <router-outlet></router-outlet>
+    </div>
+    </section>
+  
+  
+    <!-- <div class="body-class" >
+      <img src="/assets/12.png"></div> -->
+    <!-- <section>
+      <div class="footer">
+      </div>
+    </section> -->
+  </section>
+  </body>
+</html>

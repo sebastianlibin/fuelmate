@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+<!-- <link rel="stylesheet" href="style.css"> -->
+<!-- Boxicons CDN Link -->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<link href="mhome.component.scss">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="sidebar">
+<div class="logo-details">
+<i class='bx bxl-c-plus-plus'></i>
+<span class="logo_name">{{dataservice.managerdata.Manager_Name}}</span>
+</div>
+<ul class="nav-links">
+<li>
+<a href="#" class="active">
+<i class='bx bx-grid-alt'></i>
+<span class="links_name">Dashboard</span>
+</a>
+</li>
+<li>
+<a [routerLink]="['/mhome/customerview']">
+<i class='bx bx-box'></i>
+<span class="links_name">Customer View</span>
+</a>
+</li>
+<li>
+<a [routerLink]="['/mhome/bill']">
+<i class='bx bx-list-ul'></i>
+<span class="links_name">Billing</span>
+</a>
+</li>
+<li>
+    <a [routerLink]="['/mhome/dailysales']">
+    <i class='bx bx-list-ul'></i>
+    <span class="links_name">Daily Sales</span>
+    </a>
+    </li>
+    <li>
+        <a [routerLink]="['/mhome/fillingdetails']">
+        <i class='bx bx-list-ul'></i>
+        <span class="links_name">Filling</span>
+        </a>
+        </li>
+<li>
+    <a href="#">
+    <i class=''></i>
+    <span class="links_name"></span>
+    </a>
+    </li>
+    <li class="log_out">
+    <a [routerLink]="['../Gusethome']">
+    <i class='bx bx-log-out'></i>
+    <span class="links_name">Log out</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    <section class="home-section">
+    <div style="margin-left: 300px;">
+    <router-outlet></router-outlet>
+    </div>
+    </section>
+    </body>
+    </html>

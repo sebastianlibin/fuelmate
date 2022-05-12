@@ -1,0 +1,96 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" style="margin-top:0px">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"></h3>
+        <div style="float:right; font-size: 80%; position: relative; top:-10px">
+        </div>
+
+        <div class="panel-body">
+          <form role="form" [formGroup]="dailysales">
+            <div class="alert alert-danger">
+              <h4><strong>Daily Sales</strong></h4>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                  <div class="form-group">
+                    <label>Product Name</label>
+                        <select class="form-control input-sm" formControlName="Product_id" >
+                          <option selected value="">---Select---</option>
+                          <option *ngFor="let row of dataarray" [value]="row.Product_id">
+                            {{row.Product_name}}
+                          </option>
+                          </select>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group" >
+                  <label *ngFor="let item of openingstock"> Opening Stock</label>
+                  
+                  <input  type="text" name="middle_name"  formControlName="Openingstock" class="form-control" placeholder="" tabindex="1" >
+                  {{item.OpeningStock}}
+                 
+                </div>
+              </div> -->
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                  <label>Opening Stock</label>
+                  <input type="text" name="last_name"  class="form-control " formControlName="Openingstock" placeholder="" tabindex="2">
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                  <label>Closing Stock</label>
+                  <input type="text" name="last_name"  class="form-control " formControlName="cstock" placeholder="" tabindex="2">
+                </div>
+              </div>
+              <!-- <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="form-group">
+                  <label> Quantity</label>
+                  <input type="text" name="middle_name"  formControlName="Quantity" class="form-control" placeholder="" tabindex="1">
+                </div>
+              </div> -->
+              <div class="col-xs-12 col-sm-4 col-md-6">
+                <div class="form-group">
+                  <label>Description</label>
+                  <input type="text" name="last_name"  class="form-control " formControlName="Description" placeholder="" tabindex="2">
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-xs-12">
+              <div class="form-group">
+                <label></label>
+                <input type="text" name="last_name" id="last_name" class="form-control " formControlName="Description"
+                  placeholder="Enter new date" tabindex="2">
+              </div>
+            </div> -->
+
+            <div class="input-group">
+              <div class="checkbox" style="margin-top: 0px;">
+                <label>
+
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" (click)="onsubmit()">Save</button>
+
+            <hr style="margin-top:10px;margin-bottom:10px;">
+
+            <div class="form-group">
+
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
